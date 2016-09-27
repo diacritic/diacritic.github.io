@@ -2,6 +2,7 @@
 ---
 
 $dark: #101010;
+$darker: #080808;
 $green: #63e39b;
 $primary: #36465f;
 $secondary: #464646;
@@ -49,6 +50,19 @@ a {
 
 #logo.glitch {
   @include textGlitch("glitch", 17, $green, $dark, red, blue, 450, 115);
+}
+
+header {
+  height: 60px;
+  width: 100%;
+  border-bottom: 1px solid $darker;
+  margin: 0;
+}
+
+header #logo {
+  font-size: 3em;
+  margin: 0.15em auto 0 auto;
+  text-align: center;
 }
 
 #content {
