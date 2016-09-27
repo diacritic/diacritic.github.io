@@ -30,7 +30,8 @@
   }
 }
 
-@mixin textGlitch($name, $intensity, $textColor, $background, $highlightColor1, $highlightColor2, $width, $height) {
+@mixin textGlitch($name, $intensity, $textColor, $background,
+    $highlightColor1, $highlightColor2, $width, $height) {
   color: $textColor;
   position: relative;
   $steps: $intensity;
@@ -40,12 +41,7 @@
       @include keyframes('#{$name}-anim-#{$i}') {
         @for $i from 0 through $steps {
           #{percentage($i*(1/$steps))} {
-            clip: rect(
-              random($height)+px,
-              $width+px,
-              random($height)+px,
-              0
-            );
+            clip: rect(random($height)+px, $width+px, random($height)+px, 0);
           }
         }
       }
