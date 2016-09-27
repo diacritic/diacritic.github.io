@@ -12,6 +12,7 @@ $code-font-family: 'Space Mono', monospace;
 $font-color: #353535;
 
 @import 'mixins';
+@import 'fonts';
 
 body{
   margin: 0;
@@ -27,7 +28,7 @@ a {
 }
 
 .symbol {
-  font-family: 'Symbola';
+  font-family: 'Symbola-DayNight';
 }
 
 .center {
