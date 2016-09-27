@@ -1,0 +1,77 @@
+---
+---
+
+$dark: #101010;
+$green: #63e39b;
+$primary: #36465f;
+$secondary: #464646;
+
+$font-size: 16px;
+$font-family: Helvetica, sans-serif;
+$code-font-family: 'Space Mono', monospace;
+$font-color: #353535;
+
+@import 'mixins';
+
+body{
+  margin: 0;
+  background-color: $dark;
+  color: $green;
+  font-family: 'Space Mono', monospace;
+  letter-spacing: 2px;
+}
+
+a {
+  color: $green;
+  text-decoration-style: dotted;
+}
+
+.symbol {
+  font-family: 'Symbola';
+}
+
+.center {
+  text-align: center;
+}
+
+#logo {
+  display: block;
+  font-size: 10em;
+  margin: 1em auto;
+  margin-bottom: 0.5em;
+  width: 450px;
+}
+
+#logo-subtitle {
+  margin-top: -2.5em;
+}
+
+#logo.glitch {
+  @include textGlitch("glitch", 17, $green, $dark, red, blue, 450, 115);
+}
+
+#content {
+  display: block;
+  margin: auto;
+  height: 100%;
+}
+
+// 404.html
+
+.typed-cursor{
+  opacity: 1;
+  @include animation('blink 0.7s infinite');
+}
+@include keyframes(blink) {
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+
+#excerpt {
+  margin: auto;
+  width: 800px;
+  height: 120px;
+  overflow: hidden;
+}
+
