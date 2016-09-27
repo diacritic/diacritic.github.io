@@ -37,7 +37,7 @@
 
   @at-root {
     @for $i from 1 through 2 {
-      @keyframes #{$name}-anim-#{$i} {
+      @include keyframes('#{$name}-anim-#{$i}') {
         @for $i from 0 through $steps {
           #{percentage($i*(1/$steps))} {
             clip: rect(
