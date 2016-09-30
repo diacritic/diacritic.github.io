@@ -2,13 +2,15 @@
 ---
 
 $dark: #101010;
-$darker: #080808;
+$darker: #0a0a0a;
+$darkest: #080808;
 $green: #63e39b;
+$greener: lighten(#63e39b, 20);
 $primary: #36465f;
 $secondary: #464646;
 
 $font-size: 16px;
-$font-family: Helvetica, sans-serif;
+$font-family: 'Source Sans Pro', sans-serif;;
 $code-font-family: 'Space Mono', monospace;
 $font-color: #353535;
 
@@ -19,7 +21,7 @@ body{
   margin: 0;
   background-color: $dark;
   color: $green;
-  font-family: 'Space Mono', monospace;
+  font-family: $font-family;
   letter-spacing: 2px;
 }
 
@@ -49,29 +51,66 @@ a {
 }
 
 #logo.glitch {
-  @include textGlitch("glitch", 17, $green, $dark, red, blue, 450, 115);
+  @include textGlitch("glitch", 17, $green, $dark, red, blue, 450, 195);
 }
 
-header {
-  height: 60px;
-  width: 100%;
-  border-bottom: 1px solid $darker;
-  margin: 0;
-}
+/*
+ * Special layouts
+ */
 
-header #logo {
-  font-size: 3em;
-  margin: 0.15em auto 0 auto;
-  text-align: center;
-}
+/* Plain */
 
-#content {
+#plain #content {
   display: block;
   margin: auto;
   height: 100%;
+  font-family: $code-font-family;
 }
 
-// 404.html
+/* Page */
+
+#page {
+  background-color: $darker;
+  margin: 0;
+}
+
+#page #logo a {
+  text-decoration: none;
+  @include transition('color 1s');
+}
+
+#page #logo a:hover {
+  color: #61B0B7;
+  @include transition('color 1s');
+}
+
+#page header {
+  display: block;
+  width: 100%;
+  background-color: $dark;
+  border-bottom: 1px solid $darkest;
+  margin: 0;
+}
+
+#page header #logo {
+  font-size: 3em;
+  margin: 0 auto;
+  padding-top: 5px;
+  text-align: center;
+}
+
+#page #content {
+  background-color: #F0F0F0;
+  margin: 0 50px;
+  padding: 20px;
+  height: 100%;
+}
+
+/*
+ * Page-specific
+ */
+
+/* 404.html */
 
 .typed-cursor{
   opacity: 1;

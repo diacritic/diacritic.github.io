@@ -15,6 +15,23 @@
   animation:         $animations;
 }
 
+@mixin transition($t...) {
+  $max: length($t);
+  $transitions: '';
+
+  @for $i from 1 through $max {
+    $transitions: #{$transitions + nth($t, $i)};
+
+    @if $i < $max {
+      $transitions: #{$transitions + ", "};
+    }
+  }
+  -webkit-transition: $transitions;
+  -moz-transition:    $transitions;
+  -o-transition:      $transitions;
+  transition:         $transitions;
+}
+
 @mixin keyframes($name) {
   @-webkit-keyframes #{$name} {
     @content;
