@@ -76,12 +76,12 @@ a {
 
 #page #logo a {
   text-decoration: none;
-  @include transition('color 0.1s');
+  @include transition('color 0.15s');
 }
 
 #page #logo a:hover {
   color: #ef345d;
-  @include transition('color 0.1s');
+  @include transition('color 0.15s');
 }
 
 #page header {
