@@ -5,7 +5,7 @@ $dark: #101010;
 $darker: #0a0a0a;
 $darkest: #080808;
 $green: #63e39b;
-$greener: darken(#63e39b, 20);
+$greener: darken(#63e39b, 40);
 $pink: #ef345d;
 $primary: #36465f;
 $secondary: #464646;
@@ -26,7 +26,7 @@ body{
   letter-spacing: 2px;
 }
 
-a {
+a, a:visited {
   color: $green;
   text-decoration-style: dotted;
   @include transition('color 0.15s');
@@ -50,7 +50,7 @@ a:hover {
   font-size: 10em;
   margin: 1em auto;
   margin-bottom: 0.5em;
-  max-width: 450px;
+  max-width: 150px;
 }
 
 #logo-subtitle {
@@ -58,7 +58,7 @@ a:hover {
 }
 
 #logo.glitch {
-  @include textGlitch("glitch", 17, $green, $dark, red, blue, 450, 195);
+  @include textGlitch("glitch", 17, $green, $dark, red, blue, 150, 195);
 }
 
 /*
@@ -112,10 +112,6 @@ a:hover {
   color: $greener;
   text-decoration: none;
   @include transition('color 0.05s');
-}
-
-#page #content a:visited {
-  color: darken($greener, 20);
 }
 
 #page #content a:hover {

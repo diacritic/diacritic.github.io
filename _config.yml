@@ -1,6 +1,7 @@
 title: Diacritic
 tagline: ""
 url: "https://diacritic.io" # The base hostname & protocol for your site. Use it if you need absolute URL's
+permalink: /blog/:title.html
 
 github: diacritic
 
