@@ -22,7 +22,7 @@ body{
   margin: 0;
   background-color: $dark;
   color: $green;
-  font-family: $font-family;
+  font-family: $code-font-family;
   letter-spacing: 2px;
 }
 
@@ -41,9 +41,9 @@ a:hover {
   font-family: 'Symbola-DayNight';
 }
 
-.center {
-  text-align: center;
-}
+.center { text-align: center; }
+.right  { text-align: right;  }
+.left   { text-align: left;   }
 
 #logo {
   display: block;
@@ -76,45 +76,70 @@ a:hover {
 
 /* Page */
 
-#page {
+#page, #article {
   background-color: $dark;
   margin: 0;
 }
 
-#page #logo a {
+#page #logo a,
+#article #logo a {
   text-decoration: none;
 }
 
-#page header {
+#page header,
+#article header {
   display: block;
   width: 100%;
   margin: 0;
 }
 
-#page header #logo {
+#page header #logo,
+#article header #logo {
   font-size: 3em;
   margin: 30px auto;
   padding-top: 5px;
   text-align: center;
 }
 
+#article #content,
 #page #content {
+  margin: 0 50px;
+  padding: 20px;
+}
+
+.post-list {
+  padding: 0;
+}
+
+.post-list > li {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-list > li > p {
+  margin: 0;
+}
+
+/* Article */
+
+#article #content {
   background-color: #F0F0F0;
   border-radius: 5px;
   box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.75);
-  margin: 0 50px;
-  padding: 20px;
   height: 100%;
   color: $darker;
+  overflow: hidden;
+  font-family: $font-family;
 }
 
-#page #content a {
+#article #content a {
   color: $greener;
   text-decoration: none;
   @include transition('color 0.05s');
 }
 
-#page #content a:hover {
+#article #content a:hover {
   color: $pink;
   @include transition('color 0.05s');
 }
