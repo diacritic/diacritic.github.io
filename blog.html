@@ -9,7 +9,7 @@ permalink: /blog/index.html
   {% for post in site.posts %}
   <li>
     <p><a href="{{ post.url }}">{{ post.title }}</a></p>
-    <p>by <a href="/~{{ post.author | downcase }}">{{ post.author }}</a> -- {{ post.date | date: "%B %e, %Y" }}</p>
+    <p>by {% if post.author %}<a href="/~{{ post.author | downcase }}">{{ post.author }}</a>{% else %}nobody{% endif %} -- {{ post.date | date: "%B %e, %Y" }}</p>
   </li>
   {% endfor %}
 </ul>
