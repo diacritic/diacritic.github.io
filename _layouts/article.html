@@ -32,6 +32,7 @@
 -->
 
   <body id="article">
+
     <!--[if lt IE 8]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -40,12 +41,13 @@
       <h1 class="symbol" id="logo" data-text="🝰"><a href="/">🝰</a></h1>
     </header>
 
-    <section id="content">
+    <main id="content">
       <h1>{{ page.title }}</h1>
 
       {{ content }}
-    </section>
+    </main>
+
+    {% include footer.html %}
 
   </body>
 </html>
-

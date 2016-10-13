@@ -31,6 +31,7 @@ article,
 aside,
 details,
 figcaption,
+main,
 figure,
 footer,
 header,
@@ -53,6 +54,7 @@ audio:not([controls]) {
 }
 
 html {
+  height: 100%;
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
@@ -70,6 +72,7 @@ a:active {
 }
 
 body {
+  min-height: 100%;
   margin: 0;
   background-color: $dark;
   color: $green;
@@ -97,9 +100,9 @@ a:hover {
 .left   { text-align: left;   }
 
 #logo {
-  display: block;
+  display: inline-block;
   font-size: 10em;
-  margin: 1em auto;
+  margin: 1em 0;
   margin-bottom: 0.5em;
   max-width: 150px;
 }
@@ -110,6 +113,20 @@ a:hover {
 
 #logo.glitch {
   @include textGlitch("glitch", 17, $green, $dark, red, blue, 150, 195);
+}
+
+body > main {
+  min-height: -webkit-calc(100% - 100px);
+  min-height: -moz-calc(100% - 100px);
+  min-height: calc(100% - 100px);
+}
+
+body > footer {
+  font-family: $code-font-family;
+  font-size: 10px;
+  text-align: center;
+  color: #8f908a;
+  margin: 20px auto;
 }
 
 /*
@@ -180,9 +197,7 @@ code .lineno {
 /* Plain */
 
 #plain #content {
-  display: block;
   margin: auto;
-  height: 100%;
   font-family: $code-font-family-alt;
 }
 
@@ -200,9 +215,9 @@ code .lineno {
 
 #page header,
 #article header {
-  display: block;
   width: 100%;
   margin: 0;
+  text-align: center;
 }
 
 #page header #logo,
@@ -253,7 +268,6 @@ code .lineno {
   background-color: #F0F0F0;
   border-radius: 5px;
   box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.75);
-  height: 100%;
   color: $darker;
   overflow: hidden;
   font-family: $font-family;
