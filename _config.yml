@@ -15,6 +15,6 @@ defaults:
 
 sass:
   sass_dir: css/
-#  style: :compressed
+  style: :compressed
 
 exclude: [.scss, README.md, node_modules, gruntfile.js, package.json]
