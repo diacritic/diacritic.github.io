@@ -259,7 +259,8 @@ code .lineno {
 }
 
 .post-list > li :nth-child(2) {
-  width: 25em;
+  width: 16em;
+  text-align: right;
 }
 
 /* Article */
@@ -294,6 +295,7 @@ code .lineno {
   opacity: 1;
   @include animation('blink 0.7s infinite');
 }
+
 @include keyframes(blink) {
   0% { opacity:1; }
   50% { opacity:0; }
@@ -306,4 +308,3 @@ code .lineno {
   min-height: 120px;
   overflow: hidden;
 }
-
